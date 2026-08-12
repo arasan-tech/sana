@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Login</title>
 
   <style>
     * {
@@ -21,33 +21,26 @@
       background: linear-gradient(135deg, #667eea, #764ba2);
     }
 
-    .login-container {
+    .login-box {
       width: 380px;
+      background: #fff;
       padding: 35px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
       text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     }
 
-    /* Logo */
+    /* Logo image */
     .logo {
-      width: 75px;
-      height: 75px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      background: #667eea;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 30px;
-      font-weight: bold;
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin-bottom: 15px;
     }
 
     h2 {
-      margin-bottom: 8px;
       color: #333;
+      margin-bottom: 8px;
     }
 
     .subtitle {
@@ -56,32 +49,30 @@
       margin-bottom: 25px;
     }
 
-    .input-group {
+    .input-box {
       text-align: left;
       margin-bottom: 18px;
     }
 
-    .input-group label {
+    .input-box label {
       display: block;
-      margin-bottom: 7px;
       color: #444;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: bold;
+      margin-bottom: 7px;
     }
 
-    .input-group input {
+    .input-box input {
       width: 100%;
       padding: 13px;
       border: 1px solid #ddd;
       border-radius: 8px;
       outline: none;
       font-size: 15px;
-      transition: 0.3s;
     }
 
-    .input-group input:focus {
+    .input-box input:focus {
       border-color: #667eea;
-      box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
     }
 
     .options {
@@ -92,14 +83,7 @@
       font-size: 13px;
     }
 
-    .remember {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      color: #555;
-    }
-
-    .forgot {
+    .options a {
       color: #667eea;
       text-decoration: none;
     }
@@ -114,7 +98,6 @@
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      transition: 0.3s;
     }
 
     .login-btn:hover {
@@ -123,8 +106,8 @@
 
     .signup {
       margin-top: 20px;
-      font-size: 14px;
       color: #666;
+      font-size: 14px;
     }
 
     .signup a {
@@ -137,47 +120,39 @@
 
 <body>
 
-  <div class="login-container">
+  <div class="login-box">
 
-    <!-- Logo -->
-    <div class="logo">L</div>
+    <!-- Your logo image -->
+    <img src="logo.jpg" alt="Website Logo" class="logo">
 
     <h2>Welcome Back!</h2>
     <p class="subtitle">Login to your account</p>
 
     <form>
-      <div class="input-group">
-        <label for="email">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
-          required
-        >
+
+      <div class="input-box">
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
       </div>
 
-      <div class="input-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Enter your password"
-          required
-        >
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required>
       </div>
 
       <div class="options">
-        <label class="remember">
+        <label>
           <input type="checkbox">
           Remember me
         </label>
 
-        <a href="#" class="forgot">Forgot Password?</a>
+        <a href="#">Forgot Password?</a>
       </div>
 
       <button type="submit" class="login-btn">
         Login
       </button>
+
     </form>
 
     <p class="signup">
